@@ -49,7 +49,14 @@
   {{ $Site := .Site }}
   {{ if .Params.warnings }}
   <p class="seriesname">
-    Series: <a href="{{ $Site.BaseURL }}warnings/{{ .Params.warnings | urlize }}">{{ .Params.warnings }}</a>
+    Warnings: {{ .Params.warnings }}
+  </p>
+  {{ end }}
+
+  {{ $Site := .Site }}
+  {{ if .Params.careful }}
+  <p class="seriesname">
+    Careful! {{ .Params.careful }}
   </p>
   {{ end }}
 
